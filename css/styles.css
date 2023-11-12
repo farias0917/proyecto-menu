@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo{
+    max-width: 12rem;
+    margin-left: 5px;
+    border-radius: 500%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff; background: #fd746c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #68ff77, #6cec1d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */width: 100%;
+}
+
+.listaMenu{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.listaMenu li a{
+    text-decoration: none;
+    color: rgb(13, 13, 13);
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.abrirMenu, .cerrarMenu{
+    display: none;
+    font-size: 25px;
+    background: none;
+    border: none;
+}
+
+.cerrarMenu{
+    color: #fff;
+}
+@media screen and (max-width:700px){
+
+    .abrirMenu, .cerrarMenu{
+        display: block;
+    }
+    .menuPrincipal{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.35)
+    }
+
+    .menuPrincipal.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .listaMenu{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .listaMenu li a{
+        color: white;
+    }
+}
